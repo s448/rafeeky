@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'routes.dart';
-import 'Utils/style_manager.dart';
+import 'Core/Theme/style_manager.dart';
 
 void main(List<String> args) {
   return runApp(const RafeekyApp());

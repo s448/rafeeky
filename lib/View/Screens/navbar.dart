@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rafeeky/Utils/style_manager.dart';
+import 'package:rafeeky/Core/Theme/style_manager.dart';
 import 'package:rafeeky/View/Screens/home_page.dart';
-import '../../Utils/colors.dart';
+import '../../Core/Theme/colors.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -76,7 +76,7 @@ class _NavBarState extends State<NavBar> {
         ),
         child: BottomNavigationBar(
           backgroundColor: ColorManager.cardBackground,
-          selectedItemColor: ColorManager.sec3,
+          selectedItemColor: ColorManager.sec1,
           unselectedItemColor: ColorManager.forgroundColor,
           type: BottomNavigationBarType.fixed,
           items: const <BottomNavigationBarItem>[

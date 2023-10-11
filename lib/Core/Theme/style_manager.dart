@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rafeeky/Utils/colors.dart';
+import 'package:rafeeky/Core/Theme/colors.dart';
 import 'font_sizes.dart';
 
 class StyleManager {

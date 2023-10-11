@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:rafeeky/Utils/colors.dart';
-import 'package:rafeeky/Utils/style_manager.dart';
+import 'package:rafeeky/Core/Theme/colors.dart';
+import 'package:rafeeky/Core/Theme/style_manager.dart';
 import 'package:rafeeky/View/Widgets/home_page_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -61,16 +61,50 @@ class HomePage extends StatelessWidget {
             crossAxisCount: 2,
             childAspectRatio: 1.0,
             padding: const EdgeInsets.all(4.0),
-            mainAxisSpacing: 4.0,
-            crossAxisSpacing: 4.0,
-            children: List.generate(2, (index) {
-              return const HomePageCardItem(
-                title: "title",
-                description: "description",
-                imgPath: "assets/home/section1.png",
+            mainAxisSpacing: 8.0,
+            crossAxisSpacing: 8.0,
+            children: const [
+              HomePageCardItem(
+                title: "الواصلين الجدد",
+                description:
+                    "دليلك الكامل للفنرة الاولى من الوصول اللى المانيا",
+                imgPath: "assets/home/test.png",
                 color: ColorManager.sec1,
-              );
-            }),
+                isMarked: true,
+                markColor: Colors.orange,
+                tipText: "قريباً",
+              ),
+              HomePageCardItem(
+                title: "موقع المخيمات",
+                description:
+                    "تعرف على مواقع المخيمات (الكامب) وتفاصيل المخيمات بالكامل!",
+                imgPath: "assets/home/test.png",
+                color: ColorManager.sec2,
+                isMarked: false,
+                // markColor: Colors.orange,
+                // tipText: "قريباً",
+              ),
+              HomePageCardItem(
+                title: "إجراءات اللجوء",
+                description:
+                    "الخطوات الأولية للبدء في إجراءات اللجوء والحصول على الإقامة",
+                imgPath: "assets/home/test.png",
+                color: ColorManager.sec3,
+                isMarked: false,
+                // markColor: Colors.orange,
+                // tipText: "قريباً",
+              ),
+              HomePageCardItem(
+                title: "لمّ الشمل",
+                description:
+                    "كيف تقوم بإنشاء طلب لم شمل للزوجة والأولاد، التفاصيل كاملة",
+                imgPath: "assets/home/test.png",
+                color: ColorManager.sec4,
+                isMarked: false,
+                // markColor: Colors.orange,
+                // tipText: "قريباً",
+              )
+            ],
           )
         ],
       ),

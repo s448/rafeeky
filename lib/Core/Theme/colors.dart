@@ -8,13 +8,13 @@ class ColorManager {
   static const forgroundColor = Colors.white38;
 
   //sections colors
-  static const sec1 = Color.fromRGBO(6, 77, 207, 1.0);
-  static const sec2 = Color.fromRGBO(208, 7, 104, 1.0);
-  static const sec3 = Color.fromRGBO(1, 209, 147, 1.0);
-  static const sec4 = Color.fromRGBO(17, 103, 84, 1.0);
+  static const sec1 = Color.fromRGBO(1, 209, 147, 1.0);
+  static const sec2 = Color.fromRGBO(6, 77, 207, 1.0);
+  static const sec3 = Color.fromRGBO(240, 73, 255, 1.0);
+  static const sec4 = Color.fromRGBO(208, 7, 104, 1.0);
   static const sec5 = Color.fromRGBO(255, 255, 255, 1.0);
   static const sec6 = Color.fromRGBO(0, 213, 149, 1.0);
-  static const sec7 = Color.fromRGBO(240, 73, 255, 1.0);
+  static const sec7 = Color.fromRGBO(17, 103, 84, 1.0);
   static const sec8 = Color.fromRGBO(255, 119, 73, 1.0);
   static const sec9 = Color.fromRGBO(247, 146, 30, 1.0);
 }
