@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rafeeky/Core/Constant/image_path.dart';
 import 'package:rafeeky/Core/Theme/colors.dart';
 import 'package:rafeeky/Core/Theme/style_manager.dart';
 import 'package:rafeeky/View/Widgets/home_page_card.dart';
@@ -19,7 +20,7 @@ class HomePage extends StatelessWidget {
           SizedBox(
             width: Get.width,
             child: Image.asset(
-              "assets/home/banner_home.png",
+              bannerIc,
               width: double.infinity,
               fit: BoxFit.cover,
             ),
@@ -40,7 +41,7 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Image.asset(
-                  "assets/home/search_icon.png",
+                  searchIc,
                 ),
                 const SizedBox(
                   width: 4,
@@ -68,7 +69,7 @@ class HomePage extends StatelessWidget {
                 title: "الواصلين الجدد",
                 description:
                     "دليلك الكامل للفنرة الاولى من الوصول اللى المانيا",
-                imgPath: "assets/home/test.png",
+                imgPath: testIllustration,
                 color: ColorManager.sec1,
                 isMarked: true,
                 markColor: Colors.orange,
@@ -78,7 +79,7 @@ class HomePage extends StatelessWidget {
                 title: "موقع المخيمات",
                 description:
                     "تعرف على مواقع المخيمات (الكامب) وتفاصيل المخيمات بالكامل!",
-                imgPath: "assets/home/test.png",
+                imgPath: testIllustration,
                 color: ColorManager.sec2,
                 isMarked: false,
                 // markColor: Colors.orange,
@@ -88,7 +89,7 @@ class HomePage extends StatelessWidget {
                 title: "إجراءات اللجوء",
                 description:
                     "الخطوات الأولية للبدء في إجراءات اللجوء والحصول على الإقامة",
-                imgPath: "assets/home/test.png",
+                imgPath: testIllustration,
                 color: ColorManager.sec3,
                 isMarked: false,
                 // markColor: Colors.orange,
@@ -98,7 +99,7 @@ class HomePage extends StatelessWidget {
                 title: "لمّ الشمل",
                 description:
                     "كيف تقوم بإنشاء طلب لم شمل للزوجة والأولاد، التفاصيل كاملة",
-                imgPath: "assets/home/test.png",
+                imgPath: testIllustration,
                 color: ColorManager.sec4,
                 isMarked: false,
                 // markColor: Colors.orange,

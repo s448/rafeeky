@@ -10,7 +10,7 @@ class StyleManager {
     highlightColor: Colors.transparent,
     hoverColor: Colors.transparent,
     fontFamily: font,
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: ColorManager.cardBackground,
     ),
     scaffoldBackgroundColor: ColorManager.backgroundColor,
