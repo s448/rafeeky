@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:rafeeky/Core/Theme/colors.dart';
 import 'package:rafeeky/Core/Theme/style_manager.dart';
@@ -13,6 +14,7 @@ class HomePageCardItem extends StatelessWidget {
     required this.isMarked,
     this.tipText,
     this.markColor,
+    required this.subColor,
   });
   final String title;
   final bool isMarked;
@@ -21,6 +23,7 @@ class HomePageCardItem extends StatelessWidget {
   final String description;
   final String imgPath;
   final Color color;
+  final Color subColor;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -63,7 +66,7 @@ class HomePageCardItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
+                SvgPicture.asset(
                   imgPath,
                   fit: BoxFit.cover,
                   height: Get.height * 0.1,
@@ -83,10 +86,10 @@ class HomePageCardItem extends StatelessWidget {
                     Text(
                       description,
                       style: TextStyle(
-                        color: color,
+                        color: subColor,
                         fontFamily: StyleManager.font,
-                        fontSize: 10,
-                        fontWeight: FontWeight.w200,
+                        fontSize: 9.5,
+                        fontWeight: FontWeight.w100,
                       ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,

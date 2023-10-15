@@ -34,20 +34,22 @@ class _NavBarState extends State<NavBar> {
           Row(
             children: [
               Container(
+                padding: const EdgeInsets.all(6.0),
                 width: Get.width * 0.135,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: ColorManager.backgroundColor)),
+                    border: Border.all(color: ColorManager.forgroundColor)),
                 child: Image.asset("assets/home/search_icon.png"),
               ),
               const SizedBox(
                 width: 5,
               ),
               Container(
+                padding: const EdgeInsets.all(6.0),
                 width: Get.width * 0.135,
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(6),
-                    border: Border.all(color: ColorManager.backgroundColor)),
+                    border: Border.all(color: ColorManager.forgroundColor)),
                 child: Image.asset("assets/home/notifications_icon.png"),
               ),
               const SizedBox(
@@ -60,9 +62,15 @@ class _NavBarState extends State<NavBar> {
           padding: const EdgeInsets.only(right: 6.0),
           child: Drawer(
             backgroundColor: ColorManager.backgroundColor,
-            child: Image.asset(
-              "assets/home/menu_icon.png",
-              // height: 22,
+            child: Container(
+              padding: const EdgeInsets.all(6.0),
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(6),
+                  border: Border.all(color: ColorManager.forgroundColor)),
+              child: Image.asset(
+                "assets/home/menu_icon.png",
+                // height: 22,
+              ),
             ),
           ),
         ),

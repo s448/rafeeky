@@ -13,6 +13,8 @@ class HomePage extends StatelessWidget {
     return SingleChildScrollView(
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const SizedBox(
             height: 15,
@@ -39,9 +41,16 @@ class HomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(6.0)),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  searchIc,
+                const SizedBox(
+                  width: 5,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4.0),
+                  child: Image.asset(
+                    searchBarIc,
+                  ),
                 ),
                 const SizedBox(
                   width: 4,
@@ -54,7 +63,14 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 5,
+            height: 12,
+          ),
+          const Text(
+            "اللجوء والقادمين الجدد",
+            style: StyleManager.headline,
+          ),
+          const SizedBox(
+            height: 6,
           ),
           GridView.count(
             scrollDirection: Axis.vertical,
@@ -69,19 +85,21 @@ class HomePage extends StatelessWidget {
                 title: "الواصلين الجدد",
                 description:
                     "دليلك الكامل للفنرة الاولى من الوصول اللى المانيا",
-                imgPath: testIllustration,
+                imgPath: illustration1,
                 color: ColorManager.sec1,
                 isMarked: true,
                 markColor: Colors.orange,
                 tipText: "قريباً",
+                subColor: ColorManager.subSec1,
               ),
               HomePageCardItem(
                 title: "موقع المخيمات",
                 description:
                     "تعرف على مواقع المخيمات (الكامب) وتفاصيل المخيمات بالكامل!",
-                imgPath: testIllustration,
+                imgPath: illustration2,
                 color: ColorManager.sec2,
                 isMarked: false,
+                subColor: ColorManager.subSec2,
                 // markColor: Colors.orange,
                 // tipText: "قريباً",
               ),
@@ -89,9 +107,10 @@ class HomePage extends StatelessWidget {
                 title: "إجراءات اللجوء",
                 description:
                     "الخطوات الأولية للبدء في إجراءات اللجوء والحصول على الإقامة",
-                imgPath: testIllustration,
+                imgPath: illustration3,
                 color: ColorManager.sec3,
                 isMarked: false,
+                subColor: ColorManager.subSec3,
                 // markColor: Colors.orange,
                 // tipText: "قريباً",
               ),
@@ -99,9 +118,10 @@ class HomePage extends StatelessWidget {
                 title: "لمّ الشمل",
                 description:
                     "كيف تقوم بإنشاء طلب لم شمل للزوجة والأولاد، التفاصيل كاملة",
-                imgPath: testIllustration,
+                imgPath: illustration4,
                 color: ColorManager.sec4,
                 isMarked: false,
+                subColor: ColorManager.subSec4,
                 // markColor: Colors.orange,
                 // tipText: "قريباً",
               )
