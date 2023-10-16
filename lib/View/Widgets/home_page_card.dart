@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:rafeeky/Core/Theme/colors.dart';
 import 'package:rafeeky/Core/Theme/style_manager.dart';
@@ -66,7 +65,7 @@ class HomePageCardItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SvgPicture.asset(
+                Image.asset(
                   imgPath,
                   fit: BoxFit.cover,
                   height: Get.height * 0.1,
@@ -83,13 +82,29 @@ class HomePageCardItem extends StatelessWidget {
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                     ),
-                    Text(
-                      description,
-                      style: TextStyle(
-                        color: subColor,
-                        fontFamily: StyleManager.font,
-                        fontSize: 9.5,
-                        fontWeight: FontWeight.w100,
+                    RichText(
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: description,
+                            style: TextStyle(
+                              color: subColor,
+                              fontFamily: StyleManager.font,
+                              fontSize: 9.5,
+                              fontWeight: FontWeight.w100,
+                            ),
+                          ),
+                          color == ColorManager.sec6
+                              ? const TextSpan(
+                                  text: " رفيقي",
+                                  style: TextStyle(
+                                    color: ColorManager.sec1,
+                                    fontFamily: StyleManager.font,
+                                    fontSize: 9.5,
+                                    fontWeight: FontWeight.w100,
+                                  ))
+                              : const TextSpan()
+                        ],
                       ),
                       maxLines: 2,
                       overflow: TextOverflow.ellipsis,

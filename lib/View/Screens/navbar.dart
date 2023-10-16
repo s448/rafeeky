@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rafeeky/Core/Constant/image_path.dart';
 import 'package:rafeeky/Core/Theme/style_manager.dart';
+import 'package:rafeeky/View/Screens/favorites_page.dart';
 import 'package:rafeeky/View/Screens/home_page.dart';
+import 'package:rafeeky/View/Screens/notifications_page.dart';
+import 'package:rafeeky/View/Screens/profile_page.dart';
+import 'package:rafeeky/View/Screens/settings_page.dart';
 import '../../Core/Theme/colors.dart';
 
 class NavBar extends StatefulWidget {
@@ -12,7 +17,7 @@ class NavBar extends StatefulWidget {
 }
 
 class _NavBarState extends State<NavBar> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   void _onItemTapped(int index) {
     setState(() {
@@ -109,25 +114,29 @@ class _NavBarState extends State<NavBar> {
             //   label: 'الاعدادات',
             // ),
             BottomNavigationBarItem(
-              icon:
-                  NavBarItemIcon(imgPath: "assets/home/notifications_bar.png"),
+              icon: NavBarItemIcon(imgPath: notificationUnactive),
               label: 'الاشعارات',
+              activeIcon: NavBarItemIcon(imgPath: notificationActive),
             ),
             BottomNavigationBarItem(
-              icon: NavBarItemIcon(imgPath: "assets/home/profile.png"),
+              icon: NavBarItemIcon(imgPath: profileUnactive),
               label: 'الملف الشخصي',
+              activeIcon: NavBarItemIcon(imgPath: profileActive),
             ),
             BottomNavigationBarItem(
-              icon: NavBarItemIcon(imgPath: "assets/home/home.png"),
+              icon: NavBarItemIcon(imgPath: homeUnactive),
               label: 'الرئيسية',
+              activeIcon: NavBarItemIcon(imgPath: homeActive),
             ),
             BottomNavigationBarItem(
-              icon: NavBarItemIcon(imgPath: "assets/home/favorite_icon.png"),
+              icon: NavBarItemIcon(imgPath: favoritesUnactive),
               label: 'المفضلة',
+              activeIcon: NavBarItemIcon(imgPath: favoritesActive),
             ),
             BottomNavigationBarItem(
-              icon: NavBarItemIcon(imgPath: "assets/home/settings_bar.png"),
+              icon: NavBarItemIcon(imgPath: settingsUnactive),
               label: 'الاعدادات',
+              activeIcon: NavBarItemIcon(imgPath: settingsActive),
             ),
           ],
           currentIndex: _selectedIndex,
@@ -155,9 +164,9 @@ class NavBarItemIcon extends StatelessWidget {
 }
 
 var pages = <Widget>[
+  const NotificationsPage(),
+  const ProfilePage(),
   const HomePage(),
-  const HomePage(),
-  const HomePage(),
-  const HomePage(),
-  const HomePage(),
+  const FavoritesPage(),
+  const SettingsPage(),
 ];

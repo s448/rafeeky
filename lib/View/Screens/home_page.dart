@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:rafeeky/Core/Constant/image_path.dart';
 import 'package:rafeeky/Core/Theme/colors.dart';
 import 'package:rafeeky/Core/Theme/style_manager.dart';
+import 'package:rafeeky/View/Widgets/carousel.dart';
 import 'package:rafeeky/View/Widgets/home_page_card.dart';
 
 class HomePage extends StatelessWidget {
@@ -19,14 +20,8 @@ class HomePage extends StatelessWidget {
           const SizedBox(
             height: 15,
           ),
-          SizedBox(
-            width: Get.width,
-            child: Image.asset(
-              bannerIc,
-              width: double.infinity,
-              fit: BoxFit.cover,
-            ),
-          ),
+          //carousel banners
+          SizedBox(width: Get.width, child: const RafeekiCarousel()),
           const SizedBox(
             height: 15,
           ),
@@ -76,6 +71,7 @@ class HomePage extends StatelessWidget {
             scrollDirection: Axis.vertical,
             shrinkWrap: true,
             crossAxisCount: 2,
+            physics: const NeverScrollableScrollPhysics(),
             childAspectRatio: 1.0,
             padding: const EdgeInsets.all(4.0),
             mainAxisSpacing: 8.0,
@@ -124,9 +120,119 @@ class HomePage extends StatelessWidget {
                 subColor: ColorManager.subSec4,
                 // markColor: Colors.orange,
                 // tipText: "قريباً",
-              )
+              ),
+              HomePageCardItem(
+                title: "خدمات الترجمة",
+                description:
+                    "يمكنك الإستفادة من خدمات المترجمين الموثقين لدينا",
+                imgPath: illustration5,
+                color: ColorManager.sec5,
+                isMarked: false,
+                subColor: ColorManager.subSec5,
+                // markColor: Colors.orange,
+                // tipText: "قريباً",
+              ),
+              HomePageCardItem(
+                title: "خدمات قانونية ومحامين",
+                description:
+                    "ثُلّة من المحامين المخضرمين الذين تم إختيارهم من قبل",
+                imgPath: illustration6,
+                color: ColorManager.sec6,
+                isMarked: true,
+                subColor: ColorManager.subSec6,
+                markColor: Colors.redAccent,
+                tipText: "جديد",
+              ),
             ],
-          )
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          const Text(
+            "كُل ما يخصُّ العرب",
+            style: StyleManager.headline,
+          ),
+          const SizedBox(
+            height: 6,
+          ),
+          GridView.count(
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            crossAxisCount: 2,
+            physics: const NeverScrollableScrollPhysics(),
+            childAspectRatio: 1.0,
+            padding: const EdgeInsets.all(4.0),
+            mainAxisSpacing: 8.0,
+            crossAxisSpacing: 8.0,
+            children: const [
+              HomePageCardItem(
+                title: "الأطباء العرب",
+                description:
+                    "العديد من الأطباء العرب والمتخصصين يمكنك الوصول لهم الآن",
+                imgPath: illustration7,
+                color: ColorManager.sec7,
+                isMarked: false,
+                // markColor: Colors.orange,
+                // tipText: "قريباً",
+                subColor: ColorManager.subSec7,
+              ),
+              HomePageCardItem(
+                title: "المتاجر العربيَة",
+                description:
+                    "كل ما يخص المتاجر العربية المتواجدة في جميع الولايات",
+                imgPath: illustration8,
+                color: ColorManager.sec8,
+                isMarked: false,
+                subColor: ColorManager.subSec8,
+                // markColor: Colors.orange,
+                // tipText: "قريباً",
+              ),
+            ],
+          ),
+          const SizedBox(
+            height: 12,
+          ),
+          const Text(
+            "خدمات مُنَوْعة",
+            style: StyleManager.headline,
+          ),
+          const SizedBox(
+            height: 6,
+          ),
+          GridView.count(
+            scrollDirection: Axis.vertical,
+            shrinkWrap: true,
+            crossAxisCount: 2,
+            physics: const NeverScrollableScrollPhysics(),
+            childAspectRatio: 1.0,
+            padding: const EdgeInsets.all(4.0),
+            mainAxisSpacing: 8.0,
+            crossAxisSpacing: 8.0,
+            children: const [
+              HomePageCardItem(
+                title: "أماكن الخدمات",
+                description:
+                    "الجوب سنتر، الأوسلندر، البامف، المراكز الحكومية التي تهمك",
+                imgPath: illustration9,
+                color: ColorManager.sec9,
+                isMarked: false,
+                // markColor: Colors.orange,
+                // tipText: "قريباً",
+                subColor: ColorManager.subSec9,
+              ),
+              HomePageCardItem(
+                title: "نصائح لك",
+                description:
+                    "العديد من النصائح التي تهمك لتسهيل حياتك في المانيا",
+                imgPath: illustration10,
+                color: ColorManager.sec5,
+                isMarked: false,
+                subColor: ColorManager.subSec5,
+                // markColor: Colors.orange,
+                // tipText: "قريباً",
+              ),
+            ],
+          ),
         ],
       ),
     );
